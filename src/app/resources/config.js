@@ -2,10 +2,10 @@ const baseURL = "demo.magic-portfolio.com";
 
 const routes = {
   "/": true,
-  "/about": true,
+  "/about": false,
   "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/gallery": false,
 };
 
 // Enable password protection on selected routes
@@ -15,13 +15,13 @@ const protectedRoutes = {
 };
 
 const style = {
-  theme: "dark", // dark | light
-  neutral: "gray", // sand | gray | slate
-  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  theme: "light", // dark | light
+  neutral: "sand", // sand | gray | slate
+  brand: "moss", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "aqua", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
+  solidStyle: "plastic", // flat | plastic
+  border: "conservative", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
 };
@@ -46,9 +46,9 @@ const effects = {
   },
   dots: {
     display: true,
-    size: 2,
+    size: 20,
     color: "brand-on-background-weak",
-    opacity: 20,
+    opacity: 50,
   },
   lines: {
     display: false,
@@ -58,7 +58,7 @@ const effects = {
   grid: {
     display: false,
     color: "neutral-alpha-weak",
-    opacity: 100,
+    opacity: 65,
   },
 };
 

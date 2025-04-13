@@ -1,19 +1,20 @@
 import { InlineCode } from "@/once-ui/components";
+import { title } from "process";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Reece",
+  lastName: "Hayward",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Fullstack & Devops Engineer",
+  avatar: "/images/me.jpg",
+  location: "Asia/Tokyo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "日本語"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -29,12 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/reecewithnospoon",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/reece-hayward-9777a42bb/",
   },
   {
     name: "X",
@@ -44,26 +45,26 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "dev@reecehayward.com",
   },
 ];
 
 const home = {
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  title: `${person.name}'s Profile`,
+  description: `Personal website to showcase my ${person.role} skills and experience.`,
+  headline: <>Fullstack & Devops Engineer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Reece, a software engineer at <InlineCode>Kotozna inc.</InlineCode>, where I build
+      <br /> multilingual AI solutions on cloud infrastructure.
     </>
   ),
 };
 
 const about = {
-  label: "About",
-  title: "About me",
+  label: "About ${person.name}'s Profile",
+  title: `${person.name}'s Profile`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -73,7 +74,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -81,52 +82,92 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm a Tokyo-based full stack engineer with a passion for studying new technologies,
+        building high-quality frontend and backend solutions, and creating real value.
+        With an academic background in business, and strong leadership experience, I can quickly impact any project.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Kotozna",
+        timeframe: "May 2023 - Present",
+        role: "Fullstack Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Team leader and project lead, in charge of training, and task
+            estimation and allocation during regular meetings with PO’s.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Reduced costs for our ETL pipeline by ~30% by: optimizing our
+            existing custom jobs; migrating new tasks to AWS Glue.
           </>,
+          <>
+            Created a new front-end, generative AI product from scratch, and
+            deployed across our various stages via terraform and bitbucket
+            pipelines.
+          </>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/kotozna/kotozna-hp.png",
+            alt: "Kotozna Homepage",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "TheTicketSellers",
+        timeframe: "September 2016 - October 2017",
+        role: "Software Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Maintained and developed a legacy events management SAAS in PHP.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Migrated the old solution to MEAN stack.
+          </>,
+          <>
+            Set up networking infrastructure for large events.
+          </>
+        ],
+        images: [
+          {
+            src: "/images/projects/tts/tts-hp.png",
+            alt: "Eventree Homepage",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Bluehub Solutions",
+        timeframe: "August 2013 - September 2016",
+        role: "Software Engineer",
+        achievements: [
+          <>
+            Built bespoke ERP and CRM solutions for local businesses in C#.NET
+            and Telerik Kendo UI front-end framework.
+          </>,
+          <>
+            Worked independently on PHP-based side projects, including an
+            e-commerce website for Cancer Research UK.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "RedTeaWeb",
+        timeframe: "January 2013 - August 2013",
+        role: "Software Engineer",
+        achievements: [
+          <>
+            Built marketing websites for local businesses in PHP / Wordpress.
           </>,
         ],
         images: [],
@@ -135,54 +176,81 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "The University of Manchester",
+        description: <>(2017 - 2021) Bachelors in Business and Management and Modern Language (Japanese)</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Hitotsubashi University",
+        description: <>(2019 - 2020) Global Exchange Program</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Python",
+        description: <>Microservices built with GraphQL, Flask, SQLAlchemy, AWS Lambda, Pandas</>,
+        // optional: leave the array empty if you don't want to display images
+        images: []
+      },
+      {
+        title: "Vue.js / Next.js",
+        description: <>Worked on various SAAS front-end projects integrated with generative AI</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/projects/kotozna/tpg-guest.png",
+            alt: "Guest AI Application",
+            width: 9,
+            height: 16,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "AWS",
+        description: <>Certified Solutions Architect with experience in: AWS Glue, Lambda, S3, ECS, RDS, IAM etc.</>,
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/images/aws-cert.png",
+            alt: "AWS CSA Certificate",
             width: 16,
             height: 9,
-          },
-        ],
+          }
+      ]
       },
+      {
+        title: "Terraform",
+        description: <>Built and and deployed infrastructure on AWS.</>,
+      },
+      {
+        title: "Docker",
+        description: <>Experience in building and deploying to ECS with Docker Compose.</>,
+      },
+      {
+        title: "Linux",
+        description: <>Distros I have used professionally and personally: Debian; Arch; CentOS; Ubuntu; Kali; Mint.</>,
+      },
+      {
+        title: "Continuous Integration",
+        description: <>Bitbucket Pipelines; GitHub Actions; Jenkins.</>,
+      },
+      {
+        title: "ETL & Google BigQuery",
+        description: <>Experience with data pipelines and data warehousing.</>,
+      },
+      {
+        title: "Team Leadership",
+        description: <>Experience in mentoring, training, and task allocation.</>,
+      },
+      {
+        title: "Japanese",
+        description: <>Business level.</>,
+      }
     ],
   },
 };
@@ -196,9 +264,9 @@ const blog = {
 };
 
 const work = {
-  label: "Work",
+  label: "Projects",
   title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
+  description: `Some side projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

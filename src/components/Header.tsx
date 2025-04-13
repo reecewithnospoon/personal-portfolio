@@ -97,14 +97,16 @@ export const Header = () => {
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="grid"
-                    href="/work"
+                    // href="/work"
+                    href="https://github.com/reecewithnospoon"
                     label={work.label}
                     selected={pathname.startsWith("/work")}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
-                    href="/work"
+                    href="https://github.com/reecewithnospoon"
+                    // href="/work"
                     selected={pathname.startsWith("/work")}
                   />
                 </>
@@ -114,14 +116,16 @@ export const Header = () => {
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="book"
-                    href="/blog"
+                    // href="/blog"
+                    href="https://blog.reecehayward.com"
                     label={blog.label}
                     selected={pathname.startsWith("/blog")}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="book"
-                    href="/blog"
+                    href="https://blog.reecehayward.com"
+                    // href="/blog"
                     selected={pathname.startsWith("/blog")}
                   />
                 </>
