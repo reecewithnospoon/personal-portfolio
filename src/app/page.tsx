@@ -129,14 +129,15 @@ export default function About() {
                 ))}
               </Flex>
             )}
-            <SmartImage
-              src="/images/csaa.png"
-              alt="AWS Certified Solutions Architect"
-              aspectRatio="1/1"
-              radius="l"
-              isLoading={false}
-              objectFit="none"
-            />
+              <SmartImage
+                src="/images/csaa.png"
+                alt="AWS Certified Solutions Architect"
+                aspectRatio="1/1"
+                maxWidth={10}
+                radius="l"
+                isLoading={false}
+                objectFit="cover"
+              />
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
@@ -253,6 +254,8 @@ export default function About() {
                   {about.work.experiences.map((experience, index) => (
                     <Column
                       key={`${experience.company}-${experience.role}-${index}`}
+                      paddingLeft="2"
+                      paddingRight="4"
                       fillWidth
                     >
                       <Flex

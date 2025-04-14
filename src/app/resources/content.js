@@ -7,7 +7,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Fullstack & Devops Engineer",
+  role: "Full Stack & Devops Engineer",
   avatar: "/images/me.jpg",
   location: "Asia/Tokyo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "日本語"], // optional: Leave the array empty if you don't want to display languages
@@ -45,7 +45,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "dev@reecehayward.com",
+    link: "mailto:dev@reecehayward.com",
   },
 ];
 
@@ -53,7 +53,7 @@ const home = {
   label: "Home",
   title: `${person.name}'s Profile`,
   description: `Personal website to showcase my ${person.role} skills and experience.`,
-  headline: <>Fullstack & Devops Engineer</>,
+  headline: <>Full Stack & Devops Engineer</>,
   subline: (
     <>
       I'm Reece, a software engineer at <InlineCode>Kotozna inc.</InlineCode>, where I build
@@ -85,6 +85,7 @@ const about = {
         I'm a Tokyo-based full stack engineer with a passion for studying new technologies,
         building high-quality frontend and backend solutions, and creating real value.
         With an academic background in business, and strong leadership experience, I can quickly impact any project.
+        <p>Email: <strong>dev@reecehayward.com</strong></p>
       </>
     ),
   },
@@ -95,7 +96,7 @@ const about = {
       {
         company: "Kotozna",
         timeframe: "May 2023 - Present",
-        role: "Fullstack Engineer",
+        role: "Full Stack Engineer",
         achievements: [
           <>
             Team leader and project lead, in charge of training, and task
@@ -194,13 +195,13 @@ const about = {
     skills: [
       {
         title: "Python",
-        description: <>Microservices built with GraphQL, Flask, SQLAlchemy, AWS Lambda, Pandas</>,
+        description: <>Microservices built with GraphQL, Flask, SQLAlchemy, AWS Lambda, Pandas.</>,
         // optional: leave the array empty if you don't want to display images
         images: []
       },
       {
         title: "Vue.js / Next.js",
-        description: <>Worked on various SAAS front-end projects integrated with generative AI</>,
+        description: <>Worked on various SAAS front-end projects integrated with generative AI.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
