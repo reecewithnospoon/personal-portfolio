@@ -200,7 +200,7 @@ const about = {
         images: []
       },
       {
-        title: "Vue.js / Next.js",
+        title: "Typescript / Vue.js / Next.js",
         description: <>Worked on various SAAS front-end projects integrated with generative AI.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
